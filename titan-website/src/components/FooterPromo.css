@@ -1,0 +1,128 @@
+
+.footer-promo-section {
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Trust Benefits */
+
+.trust-benefits {
+  width: 100%;
+  min-height: 170px;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 190px;
+  padding: 35px 20px;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  color: #d99426;
+  text-align: center;
+}
+
+.trust-item h3 {
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* NeuCoins Banner */
+
+.neucoin-banner {
+  min-height: 180px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #b4e1e5 0%,
+    #d9f0ef 55%,
+    #ffffff 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  padding: 30px 20px;
+}
+
+.neucoin-banner p {
+  color: #405b70;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.neucoin-symbol {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  color: #ed35a4;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.neucoin-login-btn {
+  width: 190px;
+  height: 43px;
+  background: #050505;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.neucoin-login-btn:hover {
+  background: #333;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .trust-benefits {
+    gap: 90px;
+  }
+
+  .neucoin-banner {
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .trust-benefits {
+    gap: 25px;
+    padding: 35px 10px;
+  }
+
+  .trust-item {
+    gap: 15px;
+  }
+
+  .trust-item svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .trust-item h3 {
+    font-size: 11px;
+  }
+
+  .neucoin-banner {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .neucoin-banner p {
+    font-size: 14px;
+  }
+}

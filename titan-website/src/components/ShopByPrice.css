@@ -1,0 +1,223 @@
+
+.shop-price-section {
+  width: 100%;
+  padding: 0 4.1%;
+  margin: 55px auto 70px;
+}
+
+/* Gender Banners */
+
+.gender-banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.gender-banner {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gender-banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gender-banner:hover img {
+  transform: scale(1.03);
+}
+
+/* Heading */
+
+.shop-price-heading {
+  text-align: center;
+  margin: 58px 0 34px;
+}
+
+.shop-price-heading h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Price Carousel */
+
+.price-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-slider {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.price-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.price-card {
+  flex: 0 0 174px;
+  background: #f3f3f3;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.12;
+  object-fit: cover;
+}
+
+.price-card h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+  padding: 12px 4px 18px;
+}
+
+/* Navigation Arrows */
+
+.price-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: white;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.price-arrow.left {
+  left: -38px;
+}
+
+.price-arrow.right {
+  right: -38px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .shop-price-section {
+    padding: 0 3%;
+    margin-top: 40px;
+  }
+
+  .gender-banner-container {
+    gap: 10px;
+  }
+
+  .shop-price-heading {
+    margin: 40px 0 25px;
+  }
+
+  .shop-price-heading h2 {
+    font-size: 23px;
+  }
+
+  .price-card {
+    flex-basis: 155px;
+  }
+
+  .price-arrow.left {
+    left: -10px;
+  }
+
+  .price-arrow.right {
+    right: -10px;
+  }
+}
+
+
+/* Mobile Responsive - Shop By Price */
+
+@media (max-width: 480px) {
+
+  .shop-price-section {
+    width: 100%;
+    padding: 0 15px;
+    margin: 30px auto 40px;
+    overflow: hidden;
+  }
+
+  .shop-price-heading {
+    margin: 32px 0 22px;
+  }
+
+  .shop-price-heading h2 {
+    font-size: 20px;
+  }
+
+  .price-carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .price-slider {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 0 2px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .price-card {
+    flex: 0 0 44%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .price-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+  }
+
+  .price-card h3 {
+    font-size: 14px;
+    padding: 10px 3px 14px;
+    white-space: nowrap;
+  }
+
+  .price-arrow {
+    display: none;
+  }
+}

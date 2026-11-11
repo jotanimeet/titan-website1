@@ -1,0 +1,97 @@
+.best-way-section {
+  width: 100%;
+  padding: 30px 4%;
+  margin: 35px auto;
+}
+
+.best-way-section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  color: #292929;
+  margin-bottom: 28px;
+}
+
+.best-way-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
+.best-way-card {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.best-way-image {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 18px;
+  background: #f2f2f2;
+}
+
+.best-way-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.best-way-card:hover img {
+  transform: scale(1.08);
+}
+
+.best-way-card h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .best-way-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .best-way-card {
+    flex: 0 0 20%;
+  }
+
+  .best-way-image {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .best-way-section h2 {
+    font-size: 19px;
+  }
+
+  .best-way-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 12px;
+  }
+
+  .best-way-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .best-way-card h3 {
+    font-size: 16px;
+  }
+}

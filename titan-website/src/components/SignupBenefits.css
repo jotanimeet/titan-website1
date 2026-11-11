@@ -1,0 +1,144 @@
+
+.signup-benefits {
+  width: 92%;
+  margin: 45px auto 60px;
+  padding: 20px 22px 25px;
+  background: #fffaef;
+  border-radius: 12px;
+}
+
+.signup-benefits h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 22px;
+}
+
+.signup-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  flex: 1;
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.benefit-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift {
+  background: #fff0e9;
+  color: #ed4855;
+}
+
+.neu {
+  background: #f3eaff;
+}
+
+.neu-icon {
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  background: linear-gradient(120deg, #a900ed, #ff6b00);
+  color: transparent;
+  background-clip: text;
+}
+
+.emi {
+  background: #eaf0ff;
+  color: #4338ca;
+}
+
+.snapmint {
+  background: #eaf8f2;
+  color: #7545e8;
+}
+
+.benefit-text h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+.benefit-text p {
+  font-size: 11px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.signup-button {
+  width: 210px;
+  min-height: 48px;
+  flex-shrink: 0;
+  background: #050505;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-button:hover {
+  background: #333;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .signup-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-button {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .signup-benefits {
+    width: 94%;
+    padding: 18px 15px;
+    margin: 30px auto;
+  }
+
+  .signup-benefits h3 {
+    font-size: 15px;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .benefit-icon {
+    width: 48px;
+    height: 48px;
+  }
+}

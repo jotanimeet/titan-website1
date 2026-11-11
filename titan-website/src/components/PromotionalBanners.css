@@ -1,0 +1,114 @@
+
+.promotional-section {
+  width: 100%;
+  padding: 0 4.1%;
+  margin: 0 auto 60px;
+}
+
+/* Raga Banner */
+
+.raga-banner {
+  width: 100%;
+  margin: 0 auto 75px;
+  overflow: hidden;
+}
+
+.raga-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Edge Carousel */
+
+.edge-carousel {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.edge-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 0.72;
+  overflow: hidden;
+}
+
+.edge-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.edge-image.active {
+  opacity: 1;
+}
+
+/* Indicators */
+
+.edge-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin-top: 15px;
+}
+
+.edge-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid #555;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edge-dot.active {
+  width: 24px;
+  background: #050505;
+  border-color: #050505;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .promotional-section {
+    padding: 0 3%;
+    margin-bottom: 40px;
+  }
+
+  .raga-banner {
+    margin-bottom: 45px;
+  }
+
+  .edge-carousel {
+    width: 100%;
+  }
+
+  .edge-image-wrapper {
+    aspect-ratio: 2.5 / 1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .raga-banner {
+    margin-bottom: 30px;
+  }
+
+  .edge-image-wrapper {
+    aspect-ratio: 2 / 1;
+  }
+
+  .edge-indicators {
+    margin-top: 12px;
+    gap: 10px;
+  }
+}

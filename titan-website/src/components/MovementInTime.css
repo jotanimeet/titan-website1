@@ -1,0 +1,161 @@
+
+.movement-section {
+  width: 100%;
+  padding: 20px 4.1% 60px;
+  background: #fff;
+}
+
+.movement-heading {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 400;
+  color: #171717;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.movement-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* Common Card Styling */
+.movement-card {
+  background: #f1f1f1;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.movement-card:hover {
+  background: #eaeaea;
+}
+
+/* Large Automatic Card */
+.automatic-card {
+  aspect-ratio: 1.1 / 1;
+  padding: 20px;
+}
+
+.automatic-card img {
+  width: 70%;
+  margin-top: 32px;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.automatic-card h3 {
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Small Cards Grid */
+.movement-small-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.small-movement-card {
+  padding: 20px;
+  aspect-ratio: 1.1 / 1;
+}
+
+.small-movement-card img {
+  width: 150%;
+  height: 75%;
+  margin-top: 10px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.small-movement-card h3 {
+  font-size: clamp(17px, 2.1vw, 29px);
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.movement-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .movement-section {
+    padding: 25px 3%;
+  }
+
+  .movement-layout {
+    gap: 12px;
+  }
+
+  .movement-small-grid {
+    gap: 12px;
+  }
+
+  .small-movement-card h3 {
+    font-size: 19px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .movement-heading {
+    font-size: 23px;
+    margin-bottom: 18px;
+  }
+
+  .movement-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .automatic-card {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .automatic-card img {
+    width: 62%;
+    height: 75%;
+  }
+
+  .automatic-card h3 {
+    font-size: 28px;
+  }
+
+  .movement-small-grid {
+    gap: 10px;
+  }
+
+  .small-movement-card {
+    aspect-ratio: 1 / 1;
+    padding: 8% 3% 5%;
+  }
+
+  .small-movement-card img {
+    width: 72%;
+    height: 70%;
+  }
+
+  .small-movement-card h3 {
+    font-size: clamp(13px, 3.5vw, 18px);
+  }
+
+  /* ------------------------------------- */
+
+
+
+}

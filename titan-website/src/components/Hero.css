@@ -1,0 +1,185 @@
+
+.hero-section {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Main Banner */
+.hero-slide {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.hero-slide {
+  min-width: 100%;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Arrows */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.hero-arrow:hover {
+  background: #e8e8e8;
+}
+
+.hero-prev {
+  left: 35px;
+}
+
+.hero-next {
+  right: 35px;
+}
+
+/* Eight Navigation Tabs */
+.hero-tabs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 16px 8%;
+  background: #fff;
+}
+
+.hero-tab {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #333;
+  font-size: 15px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 0 4px;
+}
+
+.hero-tab span {
+  transition: color 0.3s ease;
+}
+
+.hero-tab.active span {
+  color: #111;
+  font-weight: 500;
+}
+
+/* Progress Line */
+.tab-progress {
+  width: 100%;
+  height: 4px;
+  background: #f2eadc;
+  overflow: hidden;
+}
+
+.tab-progress-fill {
+  width: 0;
+  height: 100%;
+  background: #c99b43;
+}
+
+@keyframes tabProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-slide {
+    height: 350px;
+  }
+
+  .hero-tabs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px 12px;
+    padding: 16px 4%;
+  }
+
+  .hero-tab {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero-slide {
+    height: 230px;
+  }
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 240px;
+  }
+}
+
+  .hero-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-prev {
+    left: 10px;
+  }
+
+  .hero-next {
+    right: 10px;
+  }
+
+  .hero-tabs {
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 14px 15px;
+  }
+
+  .hero-tab {
+    min-width: 110px;
+    font-size: 12px;
+  }
+}

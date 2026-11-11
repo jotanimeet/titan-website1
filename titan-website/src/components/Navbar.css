@@ -1,0 +1,307 @@
+
+/* Main Header */
+.titan-header {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* Promotional Bar */
+.titan-promo {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 9px 10px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* Utility Navigation */
+.titan-utility {
+  min-height: 38px;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-size: 11px;
+  color: #555;
+}
+
+.utility-left,
+.utility-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.utility-right button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 11px;
+  cursor: default;
+}
+
+/* Main Header */
+.titan-main-header {
+  min-height: 82px;
+  padding: 12px 4%;
+  display: grid;
+  grid-template-columns: 150px minmax(200px, 1fr) 300px;
+  align-items: center;
+  gap: 35px;
+}
+
+.titan-logo img {
+  width: 125px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Search Bar */
+.titan-search {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  border-radius: 9px;
+  color: #333;
+}
+
+.titan-search input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.titan-search input::placeholder {
+  color: #999;
+}
+
+/* Header Icons */
+.titan-header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.titan-header-icons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 11px;
+  cursor: default;
+}
+
+.mobile-menu-btn,
+.mobile-search-btn {
+  display: none;
+}
+
+/* Category Navigation */
+.titan-category-nav {
+  min-height: 48px;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.titan-category-nav > button {
+  white-space: nowrap;
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.titan-category-nav > button:hover {
+  color: #b77b24;
+}
+
+.mobile-utility-links {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .titan-main-header {
+    grid-template-columns: 120px minmax(150px, 1fr) 230px;
+    gap: 20px;
+  }
+
+  .titan-category-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 20px;
+    scrollbar-width: none;
+  }
+
+  .titan-category-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .titan-category-nav > button {
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .titan-promo {
+    font-size: 10px;
+    padding: 8px 5px;
+  }
+
+  .titan-utility {
+    display: none;
+  }
+
+  .titan-main-header {
+    min-height: 65px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobile-menu-btn,
+  .mobile-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    color: #222;
+  }
+
+  .titan-logo img {
+    width: 105px;
+  }
+
+  .titan-header-icons {
+    gap: 15px;
+  }
+
+  .titan-header-icons button {
+    display: flex;
+  }
+
+  .titan-header-icons .desktop-icon {
+    display: none;
+  }
+
+  .titan-header-icons button span {
+    display: none;
+  }
+
+  /* Mobile Search */
+  .titan-search {
+    display: none;
+  }
+
+  .titan-search.mobile-search-active {
+    display: flex;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    background: #fff;
+    padding: 12px 18px;
+    z-index: 10;
+  }
+
+  /* Mobile Menu */
+  .titan-category-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .titan-category-nav.nav-open {
+    display: flex;
+  }
+
+  .titan-category-nav > button {
+    width: 100%;
+    text-align: left;
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+  }
+
+  .mobile-utility-links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .mobile-utility-links button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 5px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 13px;
+    color: #444;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .titan-logo img {
+    width: 90px;
+  }
+
+  .titan-main-header {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .titan-header-icons {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,82 @@
+
+.why-titan {
+  padding: 75px 6%;
+  background: #fff;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.why-header span {
+  color: #a32025;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.why-header h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  color: #222;
+  margin: 14px 0;
+}
+
+.why-header p {
+  color: #777;
+  font-size: 15px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.why-card {
+  text-align: center;
+  padding: 38px 25px;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  border-color: #a32025;
+}
+
+.why-icon {
+  color: #a32025;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-size: 19px;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .why-titan {
+    padding: 55px 5%;
+  }
+
+  .why-header h2 {
+    font-size: 30px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
